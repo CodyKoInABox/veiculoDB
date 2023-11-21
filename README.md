@@ -1,4 +1,4 @@
-# Trabalho Semestral de Banco de Dados e Teste de Sofware
+# Trabalho Semestral de Banco de Dados
 
 ### Tema: Veiculo
 
