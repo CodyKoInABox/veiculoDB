@@ -41,3 +41,13 @@ CREATE TABLE aluguel(
     FOREIGN KEY (veiculo_chassi) REFERENCES veiculo(chassi),
     FOREIGN KEY (cliente_id) REFERENCES cliente(id)
 );
+
+--@block CRIAR TABELA MANUTENCAO
+CREATE TABLE manutencao(
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    aluguel_id INT NOT NULL,
+    motivo TEXT NOT NULL,
+    valor DOUBLE NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (aluguel_id) REFERENCES aluguel(id)
+);
