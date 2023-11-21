@@ -43,9 +43,9 @@ Considere:
 
 # Respostas:
 
+### Planejamento  
+https://www.invertexto.com/?n=fXc8giI
+
 ### Modelo do banco
 
-![image](https://github.com/CodyKoInABox/veiculoDB/assets/125526050/af146f0c-9cc0-407e-abf5-3ccaaac349ea)
-
-
-
+![image](https://github.com/CodyKoInABox/veiculoDB/assets/125526050/9e57ba44-9e39-4d12-b806-e1941bee843a)
