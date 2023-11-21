@@ -32,3 +32,12 @@ Considere:
 **d)** Devem ser criadas, pelo menos duas Views que auxiliem na pesquisa do gerente do banco de dados.  
 **e)** Pelo menos quatro operações de atualização do banco de dados devem ser realizadas,  contendo:  inserção  de  atributos,  remoção  de  atributos, atualização de atributos demonstrando por meio de consultas os registros iniciais e os novos valores atributos.  
 **f)** Pelo menos duas procedures e duas triggers devem ser criadas e seus usos devem ser demonstrados por meio de uma consulta.  
+
+-----
+
+# Respostas:
+
+### Modelo do banco
+
+![image](https://github.com/CodyKoInABox/veiculoN3/assets/125526050/de2fd773-8ea8-444b-b735-0318717d6c23)
+
