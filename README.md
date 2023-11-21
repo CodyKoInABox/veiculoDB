@@ -45,6 +45,7 @@ Considere:
 
 ### Modelo do banco
 
-![image](https://github.com/CodyKoInABox/veiculoDB/assets/125526050/1b2746fe-2ae3-411c-a580-4e02a5f21bee)
+![image](https://github.com/CodyKoInABox/veiculoDB/assets/125526050/af146f0c-9cc0-407e-abf5-3ccaaac349ea)
+
 
 
