@@ -48,4 +48,5 @@ https://www.invertexto.com/?n=fXc8giI
 
 ### Modelo do banco
 
-![image](https://github.com/CodyKoInABox/veiculoDB/assets/125526050/9e57ba44-9e39-4d12-b806-e1941bee843a)
+![image](https://github.com/CodyKoInABox/veiculoDB/assets/125526050/c73c86b0-0fd4-414c-bcc2-ae0f300e9979)
+
