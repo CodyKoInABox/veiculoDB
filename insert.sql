@@ -48,3 +48,12 @@ INSERT INTO aluguel(veiculo_chassi, cliente_id, retirada_status_id, devolucao_st
 ('9BRPQRST7890123', 9, 8, 9, 1, 2023-01-11, 50, 150, 1),
 ('9BRPQRST7890123', 9, 10, 11, 3, 2023-02-13, 150, 350, 2),
 ('9BRKLMNO5678901', 7, 12, 13, 7, 2023-07-29, 700, 700, 0);
+
+--@block CRIAR PRECISA DE MANUTENCAO
+INSERT INTO precisa_manutencao(veiculo_chassi) VALUES
+('9BRPQRST7890123');
+
+--@block CRIAR MANUTENCAO
+INSERT INTO manutencao(veiculo_chassi, motivo, descricao, km, data) VALUES
+('9BRPQRST7890123', 'Velho', 'Tudo certo arrumamos olho e algumas coisas mas nada demais', 482018, 2023-05-10),
+('9BRFGHIJ3456789', 'Cliente acelerou demais e motor comecou a fazer barulho estranho', 'Problema leve no injetor de combustivel, arrumamos.', 281928, 2023-10-01);
