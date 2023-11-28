@@ -42,3 +42,9 @@ SELECT nome, cpf, COUNT(*) AS quantidade FROM cliente c
 INNER JOIN aluguel a
 ON c.id = a.cliente_id
 GROUP BY c.nome;
+
+--@block | 10 -> Verificar o total faturado em um certo ano com alugueis (carros devolvidos naquele ano)
+SELECT SUM(valor_real) FROM aluguel a
+INNER JOIN status_veiculo sv
+ON sv.id = a.devolucao_status_id
+WHERE YEAR(sv.data) = 2023;
