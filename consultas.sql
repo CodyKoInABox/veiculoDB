@@ -36,3 +36,9 @@ AND v.alugado = false;
 SELECT chassi, placa, marca, modelo, cor, multiplicador FROM veiculo v
 WHERE v.multiplicador >= 2
 AND v.alugado = false;
+
+--@block | 9-> Verificar quantos alugueis cada cliente fez
+SELECT nome, cpf, COUNT(*) FROM cliente c
+INNER JOIN aluguel a
+ON c.id = a.cliente_id
+GROUP BY c.nome;
