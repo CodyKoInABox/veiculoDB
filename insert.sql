@@ -1,0 +1,23 @@
+
+
+--@block CRIAR CLIENTES
+INSERT INTO cliente(nome, cpf, telefone, cnh) VALUES
+('Leonardo DiCaprio', 12345678901, 11987654321, 583219476),
+('Brad Pitt', 23456789012, 21901234567, 974815632),
+('Martin Scorsese', 34567890123, 31876543210, 246359187),
+('Jennifer Lawrence', 45678901234, 41789012345, 815627394),
+('Rachel Senott', 56789012345, 51678901234, 362514789),
+('Tom Brady', 67890123456, 61543210987, 497831256),
+('Taylor Swift', 78901234567, 71432109876, 138926745),
+('Travis Kelce', 89012345678, 81345678901, 729643518),
+('Austin Reaves', 90123456789, 91234567890, 654782913),
+('Barbara Corcoran', 98765432109, 21987654321, 915374826);
+
+--@block  CRIAR VEICULOS
+INSERT INTO veiculo VALUES
+('9BRABCDE1234567', 'ABC1234', 'Mercedes', 'C180', 'Preto', 2017, 121845, 5.0, true),
+('9BRFGHIJ8901234', 'XYZ5678', 'BMW', 'M4', 'Branco', 2019, 91463, 3.0, false),
+('9BRKLMNO5678901', 'QWE9876', 'Volkswagen', 'Taos', 'Cinza', 2023, 10845, 1.0, false),
+('9BRPQRST2345678', 'DEF6543', 'Fiat', 'Mobi', 'Branco', 2021, 82644, 1.0, true),
+('9BRFGHIJ3456789', 'MNO8901', 'Ferrari', '360 Spider', 'Vermelho', 2003, 291400, 10.0, true),
+('9BRPQRST7890123', 'GHI4321', 'Fiat', 'Uno Mille', 'Vermelho', 2000, 492820, 0.5, false);
