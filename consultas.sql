@@ -16,3 +16,10 @@ AND v.ano < 2010;
 SELECT chassi, placa, marca, modelo, ano FROM veiculo v
 WHERE v.alugado = true
 AND v.ano > 2010;
+
+--@block | 4-> Verificar quantas manutencoes foram feitas no mes de maio (qualque ano)
+SELECT COUNT(id) FROM manutencao m
+WHERE MONTH(m.data) = 05;
+
+--@block | 5-> Verificar a quantidade de cada cor de carro
+SELECT cor, COUNT(*) FROM veiculo GROUP BY cor;
