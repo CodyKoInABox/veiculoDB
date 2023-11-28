@@ -1,5 +1,4 @@
 
-
 --@block CRIAR TABELA status_veiculo
 CREATE TABLE status_veiculo(
     id INT NOT NULL AUTO_INCREMENT,
