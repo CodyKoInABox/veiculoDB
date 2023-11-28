@@ -48,5 +48,6 @@ https://www.invertexto.com/?n=fXc8giI
 
 ### Modelo do banco:  
 Para criar esse modelo: [createDB.sql](https://github.com/CodyKoInABox/veiculoDB/blob/main/createDB.sql)  
-![image](https://github.com/CodyKoInABox/veiculoDB/assets/125526050/b44226e6-5253-44ea-bd15-1d8e58500206)
+![image](https://github.com/CodyKoInABox/veiculoDB/assets/125526050/4714cce7-1dfc-40f7-a998-dd74c9c39d12)
+
 
