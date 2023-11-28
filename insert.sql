@@ -21,3 +21,30 @@ INSERT INTO veiculo VALUES
 ('9BRPQRST2345678', 'DEF6543', 'Fiat', 'Mobi', 'Branco', 2021, 82644, 1.0, true),
 ('9BRFGHIJ3456789', 'MNO8901', 'Ferrari', '360 Spider', 'Vermelho', 2003, 291400, 10.0, true),
 ('9BRPQRST7890123', 'GHI4321', 'Fiat', 'Uno Mille', 'Vermelho', 2000, 492820, 0.5, false);
+
+--@block CRIAR STATUS VEICULOS
+INSERT INTO status_veiculo(data, km, litros) VALUES
+(2023-11-28, 121845, 70),
+(2023-10-1, 91392, 60),
+(2023-10-6, 91463, 59),
+(2021-02-10, 0, 50),
+(2021-02-21, 362, 42),
+(2023-11-20, 82644, 40),
+(2023-11-01, 291400, 60),
+(2023-01-10, 401735, 30),
+(2023-01-12, 401900, 27),
+(2023-02-10, 491794, 30),
+(2023-02-15, 492820, 29),
+(2023-07-22, 10711, 50),
+(2023-07-29, 10845, 48);
+
+--@block CRIAR ALUGUEIS (quando retirada_status e devolucao_status forem iguais e pois o carro ainda nao foi devolvido)
+INSERT INTO aluguel(veiculo_chassi, cliente_id, retirada_status_id, devolucao_status_id, dias, data_prevista, valor_previsto, valor_real, dias_atraso) VALUES
+('9BRABCDE1234567', 1, 1, 1, 6, 2023-12-04, 3000, NULL, NULL),
+('9BRFGHIJ8901234', 10, 2, 3, 4, 2023-10-5, 1200, 1800, 1),
+('9BRKLMNO5678901', 2, 4, 5, 11, 2021-02-21, 1100, 1100, 0),
+('9BRPQRST2345678', 5, 6, 6, 10, 2023-11-30, 1000, NULL, NULL),
+('9BRFGHIJ3456789', 3, 7, 7, 30, 2023-12-01, 30000, NULL, NULL),
+('9BRPQRST7890123', 9, 8, 9, 1, 2023-01-11, 50, 150, 1),
+('9BRPQRST7890123', 9, 10, 11, 3, 2023-02-13, 150, 350, 2),
+('9BRKLMNO5678901', 7, 12, 13, 7, 2023-07-29, 700, 700, 0);
