@@ -18,11 +18,11 @@ WHERE v.alugado = true
 AND v.ano > 2010;
 
 --@block | 4-> Verificar quantas manutencoes foram feitas no mes de maio (qualque ano)
-SELECT COUNT(id) FROM manutencao m
+SELECT COUNT(id) AS quantidade FROM manutencao m
 WHERE MONTH(m.data) = 05;
 
 --@block | 5-> Verificar a quantidade de cada cor de carro
-SELECT cor, COUNT(*) FROM veiculo GROUP BY cor;
+SELECT cor, COUNT(*) AS quantidade FROM veiculo GROUP BY cor;
 
 --@block | 6-> Verificar todos os clientes e seus detalhes
 SELECT nome, cpf, telefone, cnh FROM cliente;
@@ -38,7 +38,7 @@ WHERE v.multiplicador >= 2
 AND v.alugado = false;
 
 --@block | 9-> Verificar quantos alugueis cada cliente fez
-SELECT nome, cpf, COUNT(*) FROM cliente c
+SELECT nome, cpf, COUNT(*) AS quantidade FROM cliente c
 INNER JOIN aluguel a
 ON c.id = a.cliente_id
 GROUP BY c.nome;
