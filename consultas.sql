@@ -23,3 +23,16 @@ WHERE MONTH(m.data) = 05;
 
 --@block | 5-> Verificar a quantidade de cada cor de carro
 SELECT cor, COUNT(*) FROM veiculo GROUP BY cor;
+
+--@block | 6-> Verificar todos os clientes e seus detalhes
+SELECT nome, cpf, telefone, cnh FROM cliente;
+
+--@block | 7-> Verificar veiculos populares (multiplicador ate 2) disponiveis para aluguel
+SELECT chassi, placa, marca, modelo, cor, multiplicador FROM veiculo v
+WHERE v.multiplicador <= 2
+AND v.alugado = false;
+
+--@block | 7-> Verificar veiculos de luxo (multiplicador acima de 2) disponiveis para aluguel
+SELECT chassi, placa, marca, modelo, cor, multiplicador FROM veiculo v
+WHERE v.multiplicador >= 2
+AND v.alugado = false;
