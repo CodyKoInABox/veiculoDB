@@ -32,7 +32,7 @@ SELECT chassi, placa, marca, modelo, cor, multiplicador FROM veiculo v
 WHERE v.multiplicador <= 2
 AND v.alugado = false;
 
---@block | 7-> Verificar veiculos de luxo (multiplicador acima de 2) disponiveis para aluguel
+--@block | 8-> Verificar veiculos de luxo (multiplicador acima de 2) disponiveis para aluguel
 SELECT chassi, placa, marca, modelo, cor, multiplicador FROM veiculo v
 WHERE v.multiplicador >= 2
 AND v.alugado = false;
