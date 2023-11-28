@@ -27,9 +27,9 @@ CREATE TABLE veiculo(
 CREATE TABLE cliente(
     id INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(255) NOT NULL,
-    cpf INT NOT NULL UNIQUE,
-    telefone INT NOT NULL,
-    cnh INT NOT NULL UNIQUE,
+    cpf VARCHAR(11) NOT NULL UNIQUE,
+    telefone VARCHAR(11) NOT NULL,
+    cnh VARCHAR(9) NOT NULL UNIQUE,
     PRIMARY KEY (id)
 );
 
@@ -71,3 +71,4 @@ CREATE TABLE aluguel(
     FOREIGN KEY (retirada_status_id) REFERENCES status_veiculo(id),
     FOREIGN KEY (devolucao_status_id) REFERENCES status_veiculo(id)
 );
+
