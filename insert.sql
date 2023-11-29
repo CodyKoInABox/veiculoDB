@@ -24,30 +24,30 @@ INSERT INTO veiculo VALUES
 
 --@block CRIAR STATUS VEICULOS
 INSERT INTO status_veiculo(data, km, litros) VALUES
-(2023-11-28, 121845, 70),
-(2023-10-1, 91392, 60),
-(2023-10-6, 91463, 59),
-(2021-02-10, 0, 50),
-(2021-02-21, 362, 42),
-(2023-11-20, 82644, 40),
-(2023-11-01, 291400, 60),
-(2023-01-10, 401735, 30),
-(2023-01-12, 401900, 27),
-(2023-02-10, 491794, 30),
-(2023-02-15, 492820, 29),
-(2023-07-22, 10711, 50),
-(2023-07-29, 10845, 48);
+(DATE('2023-11-28'), 121845, 70),
+(DATE('2023-10-1'), 91392, 60),
+(DATE('2023-10-6'), 91463, 59),
+(DATE('2021-02-10'), 0, 50),
+(DATE('2021-02-21'), 362, 42),
+(DATE('2023-11-20'), 82644, 40),
+(DATE('2023-11-01'), 291400, 60),
+(DATE('2023-01-10'), 401735, 30),
+(DATE('2023-01-12'), 401900, 27),
+(DATE('2023-02-10'), 491794, 30),
+(DATE('2023-02-15'), 492820, 29),
+(DATE('2023-07-22'), 10711, 50),
+(DATE('2023-07-29'), 10845, 48);
 
 --@block CRIAR ALUGUEIS (quando retirada_status e devolucao_status forem iguais e pois o carro ainda nao foi devolvido)
 INSERT INTO aluguel(veiculo_chassi, cliente_id, retirada_status_id, devolucao_status_id, dias, data_prevista, valor_previsto, valor_real, dias_atraso) VALUES
-('9BRABCDE1234567', 1, 1, 1, 6, 2023-12-04, 3000, NULL, NULL),
-('9BRFGHIJ8901234', 10, 2, 3, 4, 2023-10-5, 1200, 1800, 1),
-('9BRKLMNO5678901', 2, 4, 5, 11, 2021-02-21, 1100, 1100, 0),
-('9BRPQRST2345678', 5, 6, 6, 10, 2023-11-30, 1000, NULL, NULL),
-('9BRFGHIJ3456789', 3, 7, 7, 30, 2023-12-01, 30000, NULL, NULL),
-('9BRPQRST7890123', 9, 8, 9, 1, 2023-01-11, 50, 150, 1),
-('9BRPQRST7890123', 9, 10, 11, 3, 2023-02-13, 150, 350, 2),
-('9BRKLMNO5678901', 7, 12, 13, 7, 2023-07-29, 700, 700, 0);
+('9BRABCDE1234567', 1, 1, 1, 6, DATE('2023-12-04'), 3000, NULL, NULL),
+('9BRFGHIJ8901234', 10, 2, 3, 4, DATE('2023-10-5'), 1200, 1800, 1),
+('9BRKLMNO5678901', 2, 4, 5, 11, DATE('2021-02-21'), 1100, 1100, 0),
+('9BRPQRST2345678', 5, 6, 6, 10, DATE('2023-11-30'), 1000, NULL, NULL),
+('9BRFGHIJ3456789', 3, 7, 7, 30, DATE('2023-12-01'), 30000, NULL, NULL),
+('9BRPQRST7890123', 9, 8, 9, 1, DATE('2023-01-11'), 50, 150, 1),
+('9BRPQRST7890123', 9, 10, 11, 3, DATE('2023-02-13'), 150, 350, 2),
+('9BRKLMNO5678901', 7, 12, 13, 7, DATE('2023-07-29'), 700, 700, 0);
 
 --@block CRIAR PRECISA DE MANUTENCAO
 INSERT INTO precisa_manutencao(veiculo_chassi) VALUES
@@ -55,5 +55,5 @@ INSERT INTO precisa_manutencao(veiculo_chassi) VALUES
 
 --@block CRIAR MANUTENCAO
 INSERT INTO manutencao(veiculo_chassi, motivo, descricao, km, data) VALUES
-('9BRPQRST7890123', 'Velho', 'Tudo certo arrumamos olho e algumas coisas mas nada demais', 482018, 2023-05-10),
-('9BRFGHIJ3456789', 'Cliente acelerou demais e motor comecou a fazer barulho estranho', 'Problema leve no injetor de combustivel, arrumamos.', 281928, 2023-10-01);
+('9BRPQRST7890123', 'Velho', 'Tudo certo arrumamos olho e algumas coisas mas nada demais', 482018, DATE('2023-05-10')),
+('9BRFGHIJ3456789', 'Cliente acelerou demais e motor comecou a fazer barulho estranho', 'Problema leve no injetor de combustivel, arrumamos.', 281928, DATE('2023-10-01'));
