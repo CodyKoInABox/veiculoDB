@@ -10,3 +10,11 @@ BEGIN
 END;
 
 --@block | 2-> Envia todos os carros que precisam de manutencao para manutencao, removendo-os da tabela precisa_manutencao e adicionando-os a tabela manutencao
+CREATE PROCEDURE EnviarCarrosParaManutencao()
+BEGIN
+    INSERT INTO manutencao(veiculo_chassi, motivo, descricao, km, data)
+    SELECT v.chassi, NULL, NULL, v.km, CURDATE() FROM veiculo v
+    INNER JOIN precisa_manutencao pm
+    ON v.chassi = pm.veiculo_chassi;
+    DELETE * FROM precisa_manutencao;
+END;
