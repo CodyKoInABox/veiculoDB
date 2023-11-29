@@ -1,6 +1,10 @@
 -- Baseado nos triggers: https://www.invertexto.com/?n=fXc8giI
 
 --@block | 1-> Quando um aluguel e criado, precisa ser informado o numero de dias do aluguel, o trigger vai usar os dias + a data de retirada para calcular a data_prevista
+CREATE TRIGGER dataPrevista BEFORE INSERT ON aluguel
+FOR EACH ROW
+SET data_prevista = CURDATE() + NEW.dias;
+
 
 --@block | 2-> Quando um aluguel e criado, precisa ser definido o veiculo, cada veiculo tem um multiplicador que multiplica o valor base da diaria (100 reais), o trigger faz a conta e atualiza o valor_prevista baseado no multiplicador e no numero de dias
 
