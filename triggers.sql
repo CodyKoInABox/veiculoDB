@@ -15,6 +15,16 @@ BEGIN
 END
 
 --@block | 3-> Quando uma devolucao e criada, o trigger verifica se o dia da devolucao tem atraso em relacao a data prevista, se tiver, cria uma multa e adiciona ao valor real (multa = dobro da diaria por dia atrasado
+CREATE TRIGGER verificarAtrasoCriarMulta BEFORE UPDATE ON aluguel a
+FOR EACH ROW
+BEGIN
+    IF !(NEW.devolucao_status_id <=> OLD.devolucao_status_id) THEN
+    IF (DATE(SELECT sv.data status_veiculo sv FROM INNER JOIN aluguel a ON sv.id = a.devolucao_status_id) > DATE(SELECT a.data_prevista FROM aluguel a)) THEN
+    UPDATE aluguel a
+    SET a.dias_atraso = DATE(SELECT sv.data status_veiculo sv FROM INNER JOIN aluguel a ON sv.id = a.devolucao_status_id) - DATE(SELECT a.data_prevista FROM aluguel a),
+    a.valor_real = a.valor_previsto + (a.dias_atraso * 200 * SELECT v.multiplicador FROM veiculo v INNER JOIN aluguel a ON v.chassi = a.veiculo_chassi);
+END
+    
 
 --@block | 4-> Quando um novo aluguel e criado, o trigger muda o bool do veiculo alugado para true
 CREATE TRIGGER novaDevolucao BEFORE UPDATE ON aluguel
