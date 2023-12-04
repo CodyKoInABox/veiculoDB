@@ -5,8 +5,14 @@ CREATE TRIGGER dataPrevista BEFORE INSERT ON aluguel
 FOR EACH ROW
 SET data_prevista = CURDATE() + NEW.dias;
 
-
 --@block | 2-> Quando um aluguel e criado, precisa ser definido o veiculo, cada veiculo tem um multiplicador que multiplica o valor base da diaria (100 reais), o trigger faz a conta e atualiza o valor_prevista baseado no multiplicador e no numero de dias
+CREATE TRIGGER calcularPrecoNovoAluguel BEFORE INSERT ON aluguel a
+FOR EACH ROW
+BEGIN
+    UPDATE aluguel a
+    INNER JOIN veiculo v ON v.chassi = a.veiculo_chassi
+    SET a.valor_previsto = 100 * v.multiplicador
+END
 
 --@block | 3-> Quando uma devolucao e criada, o trigger verifica se o dia da devolucao tem atraso em relacao a data prevista, se tiver, cria uma multa e adiciona ao valor real (multa = dobro da diaria por dia atrasado
 
