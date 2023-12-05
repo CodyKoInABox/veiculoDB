@@ -3,11 +3,11 @@
 ### Tema: Veiculo
 
 #### Alunos:
-**->** Maruan Biasi
+**->** Maruan Biasi⠀|⠀https://github.com/CodyKoInABox
 
-**->** Victor Matheus
+**->** Victor Matheus⠀|⠀https://github.com/tovimatheusmoreira
 
-**->** Ricardo Falcao
+**->** Ricardo Falcao⠀|⠀
 
 
 -----
